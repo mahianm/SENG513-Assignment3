@@ -1,0 +1,70 @@
+/* Course: SENG 513 */
+/* Date: Nov 14, 2023 */
+/* Assignment 3 */
+/* Name: Muhammad Mahian */
+/* UCID: 30099187 */
+
+@import url('https://fonts.cdnfonts.com/css/arcade-classic');
+
+body {
+    background-color: #000000;
+    color: #c800ff; 
+    font-family: 'ArcadeClassic', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.instructions-container {
+    background-color: #000000;
+    border: 2px solid #c800ff; 
+    padding: 20px;
+    text-align: center;
+    max-width: 100%;
+    font-size: 20px;
+}
+
+.keyboard-layout {
+    display: flex;
+    justify-content: center;
+}
+
+.keyboard-box {
+    border: 2px solid #c800ff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 5px;
+}
+
+.empty-box {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+#start-button {
+    background-color: #ff5733;
+    color: #000000;
+    font-size: 48px;
+    padding: 15px 30px;
+    border: 2px solid #c800ff;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'ArcadeClassic', sans-serif;
+}
+
+#start-button:hover {
+    background-color: #c800ff;
+    color: #000000;
+}

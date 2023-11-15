@@ -1,0 +1,257 @@
+/* Course: SENG 513 */
+/* Date: Nov 14, 2023 */
+/* Assignment 3 */
+/* Name: Muhammad Mahian */
+/* UCID: 30099187 */
+
+@import url('https://fonts.cdnfonts.com/css/arcade-classic');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.title {
+    font-family: 'ArcadeClassic', sans-serif;
+    font-size: 70px;
+    background: -webkit-linear-gradient(45deg, #ff5733, #ffdf33, #33ff57, #339bff, #7133ff, #ff33ca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 20px;
+}
+
+.air-hockey-table {
+    margin-top: 20px;
+    width: 1000px;
+    height: 575px;
+    border: 20px solid #333333;
+    border-radius: 50px;
+    background-color: #000000;
+    position: relative;
+    box-shadow: 0 0 40px #c800ff; 
+}
+
+.neon-glow {
+    text-shadow: 0 0 10px #c800ff, 0 0 20px #c800ff, 0 0 30px #c800ff;
+}
+
+.center-line {
+    width: 5px;
+    height: 100%;
+    background-color: #c800ff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.face-off {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #c800ff;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.face-off.top-left {
+    left: 20%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.face-off.top-right {
+    right: 20%;
+    top: 20%;
+    transform: translate(50%, -50%);
+}
+
+.face-off.bottom-left {
+    left: 20%;
+    bottom: 20%;
+    transform: translate(-50%, 50%);
+}
+
+.face-off.bottom-right {
+    right: 20%;
+    bottom: 20%;
+    transform: translate(50%, 50%);
+}
+
+.puck {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #ff5733, #ffdf33, #33ff57, #339bff, #7133ff, #ff33ca);
+    box-shadow: 0 0 15px rgba(200, 0, 255, 0.6); 
+}
+
+.mallet {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff5733, #ff0000);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px rgba(255, 87, 51, 0.7);
+    border: 2px solid #c800ff;
+}
+
+.player-1-mallet {
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.player-2-mallet {
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.circle {
+    width: 160px;
+    height: 160px;
+    border: 5px solid #c800ff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.goal {
+    width: 50px;
+    height: 200px;
+    background: linear-gradient(to right, #c800ff, #b800e6); 
+    box-shadow: inset 0 0 20px rgba(200, 0, 255, 0.2), 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #000000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.goal.left {
+    left: 0;
+}
+
+.goal.right {
+    right: 0;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+    font-family: 'ArcadeClassic', sans-serif;
+    color: #ff5733;
+}
+
+.score {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+@media (max-width: 1440px) {
+    body {
+        flex-direction: column;
+    }
+
+    .title {
+        position: absolute;
+        top: 50%; 
+        left: -5%; 
+        transform: rotate(-90deg);
+    }
+
+    .air-hockey-table {
+        width: 1300px;
+        height: 650px;
+        transform: rotate(90deg); 
+        border-radius: 0;
+        box-shadow: none;
+        margin-top: 20px;
+    }
+
+    .center-line {
+        width: 3px;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .face-off {
+        width: 80px;
+        height: 80px;
+        border: 3px solid #c800ff;
+    }
+
+    .face-off.top-left {
+        left: 20%;
+        top: 20%;
+        transform: translate(-50%, -50%);
+    }
+
+    .face-off.top-right {
+        right: 20%;
+        top: 20%;
+        transform: translate(50%, -50%);
+    }
+
+    .face-off.bottom-left {
+        left: 20%;
+        bottom: 20%;
+        transform: translate(-50%, 50%);
+    }
+
+    .face-off.bottom-right {
+        right: 20%;
+        bottom: 20%;
+        transform: translate(50%, 50%);
+    }
+
+    .puck {
+        width: 60px;
+        height: 60px;
+        box-shadow: 0 0 10px rgba(200, 0, 255, 0.6);
+    }
+
+    .mallet {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #c800ff;
+    }
+
+    .goal {
+        width: 40px;
+        height: 160px;
+    }
+
+    .scoreboard {
+        flex-direction: column;
+        position: absolute;
+        top: 33%; 
+        left: 50%;
+        transform: rotate(-90deg); 
+    }
+
+    .score {
+        font-size: 20px;
+    }
+  
+    
+}
